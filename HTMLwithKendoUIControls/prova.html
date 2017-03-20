@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!-- http://docs.telerik.com/kendo-ui/third-party/using-kendo-with-twitter-bootstrap -->
+
+
+    <!-- bootstrap 3 -->
+    <!--<link href="styles/bootstrap.min.css" rel="stylesheet" />-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- bootstrap 4 -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
+
+
+
+    <!-- Common Kendo UI CSS for web widgets and widgets for data visualization. -->
+    <!-- <link href="styles/kendo.common.min.css" rel="stylesheet" /> -->
+    <!-- USE THIS COMMON FOR BOOTSTRAP INTEGRATION -->
+    <link href="styles/kendo.common-bootstrap.min.css" rel="stylesheet" />
+
+    
+    
+    <!-- Default Kendo UI theme CSS for web widgets and widgets for data visualization. -->
+    <!--<link href="styles/kendo.default.min.css" rel="stylesheet" />-->
+    <!-- (Optional) Kendo UI Hybrid CSS. Include only if you will use the mobile devices features. -->
+    <!--<link href="styles/kendo.default.mobile.min.css" rel="stylesheet" type="text/css" />-->
+    <!-- USE THIS THEME FOR BOOTSTRAP INTEGRATION (or other BOOSTRAP THEMES) -->
+    <link href="styles/kendo.bootstrap.min.css" rel="stylesheet" />
+
+
+    <!-- jQuery JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Kendo UI combined JavaScript -->
+    <script src="js/kendo.all.min.js"></script>
+</head>
+<body>
+    <div id="grid"></div>
+<script>
+    $(function () {
+
+        var dati = [
+                    { id: 1, nome: "alessio", congome: "pinato", note: "sdfsdfsdfsdfsdfsd sdfsdf" },
+                    { id: 2, nome: "alessio", congome: "pinato", note: "sdfsdfsdfsdfsdfsd sdfsdf" },
+                    { id: 3, nome: "alessio", congome: "pinato", note: "sdfsdfsdfsdfsdfsd sdfsdf" },
+                    { id: 4, nome: "alessio", congome: "pinato", note: "sdfsdfsdfsdfsdfsd sdfsdf" },
+                    { id: 5, nome: "alessio", congome: "pinato", note: "sdfsdfsdfsdfsdfsd sdfsdf" },
+                    { id: 6, nome: "alessio", congome: "pinato", note: "sdfsdfsdfsdfsdfsd sdfsdf" }
+        ];
+
+        $("#grid").kendoGrid({
+            autobind: true,
+            dataSource : dati,
+            height: 300,
+            width: 500,
+            pageable: true
+        });
+    });
+
+</script>
+</body>
+
+</html>
