@@ -11,5 +11,5 @@ A HTML template that uses KendoUI controls styled with KendoUI Bootstrap Theme
 
 
 
-an always userfull link about .md
+an always userfull link about .md markup
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet 
