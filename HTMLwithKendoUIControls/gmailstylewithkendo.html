@@ -27,6 +27,7 @@
     
     
     <!-- http://www.bootply.com/XXmcPas41w -->
+    <!-- https://www.bootply.com/7teIvGLIzY -->
     <style>
        
         
@@ -134,19 +135,37 @@
         td.idcol {
             border-width: 0px 0 1px 0px !important;
             white-space: nowrap;
-            
+            width: 5px;  
         }
 
         td.stato {
             border-width: 0px 0 1px 0px !important;
             white-space: nowrap;
-            width: 30px;
+            width: 50px;
         }
+        
+        .badge-notify{
+           position:relative;
+           top: -10px;
+           left: -30px;
+        }
+        
+        .state1 {
+           background:red; 
+        }
+        .state2 {
+            background: #f0ad4e;
+        }
+        .state3 {
+            background:green;
+        }
+        
+        
         
         td.recipient {
             border-width: 0px 0 1px 0px !important;
             white-space: nowrap;
-            width: 100px;
+            width: 250px;
         }
         
         td.subject {
@@ -274,13 +293,15 @@
                     </li>
                     <li>
                         <a href="#profile" data-toggle="tab">
-                            <span class="glyphicon glyphicon-user"></span>
+                            <span class="glyphicon glyphicon-inbox"></span>
+                            <span class="glyphicon glyphicon-tag" style="left: -12px;"></span>
                             Social
                         </a>
                     </li>
                     <li>
                         <a href="#messages" data-toggle="tab">
-                            <span class="glyphicon glyphicon-tags"></span>
+                            <span class="glyphicon glyphicon-inbox"></span>
+                            <span class="glyphicon glyphicon-tags" style="left: -12px;"></span>
                             Promotions
                         </a>
                     </li>
@@ -329,11 +350,16 @@
     <script id="rowTemplate" type="text/x-kendo-tmpl">
 	            <tr data-uid="#: uid #" style="border: solid 1px green;">
 		            <td class="idcol">
-                       <img src="../content/web/Employees/#:data.id#.jpg" alt="#: data.id #" />
+                       <!--<img src="../content/web/Employees/#:data.id#.jpg" alt="#: data.id #" />-->
+                       <input type="checkbox" >
 		            </td>
 		            <td class="stato">
-			           <span class="name">#: stato#</span>
-			           
+                       <div>
+                           <button class="btn btn-default btn-link" style="font-size: 25px;">
+                                <span class="glyphicon glyphicon-envelope"></span>
+                            </button>
+                           <span class="badge badge-notify state#:stato#">#: stato#</span>
+			           </div>
 		            </td>
                     <td class="recipient">
 			            #: recipient# <#: nome#> 
@@ -364,11 +390,11 @@
     $(function () {
         
         var dati = [
-                    { id: 1, stato: 0, recipient: "alessio", nome: "pinato", subject: "sdfsdfsdfsdfsdfsd sdfsdf", targa:"" },
+                    { id: 1, stato: 3, recipient: "alessio", nome: "pinato", subject: "sdfsdfsdfsdfsdfsd sdfsdf", targa:"" },
                     { id: 2, stato: 2, recipient: "alessio", nome: "pinato", subject: "sdfsdfsdfsdfsdfsd sdfsdf", targa:"" },
                     { id: 3, stato: 2, recipient: "alessio fsdfdsff sddsf dsds", nome: "pinato", subject: "sdfsdfsdfsdfsdfsd sdfsdf", targa:"" },
                     { id: 4, stato: 1, recipient: "alessio", nome: "pinato", subject: "sdfsdfsdfsdfsdfsd sdfsdf", targa:"" },
-                    { id: 5, stato: 0, recipient: "alessio", nome: "pinato", subject: "sdfsdfsdfsdfsdfsd sdfsdf", targa:"" },
+                    { id: 5, stato: 3, recipient: "alessio", nome: "pinato", subject: "sdfsdfsdfsdfsdfsd sdfsdf", targa:"" },
                     { id: 6, stato: 2, recipient: "alessio", nome: "pinato", subject: "sdfsdfsdfsdfsdfsd sdfsdf", targa:"" }
         ];
 
